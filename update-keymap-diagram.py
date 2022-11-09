@@ -322,6 +322,8 @@ layer_names = {
   "_NAV": "Navigation &amp; shortcuts",
   "_WNAV": "Workspace navigation",
   "_FUN": "F keys",
+  "_GM1": "Gaming 1",
+  "_GM2": "Gaming 2",
 }
 
 # We'll just strip the keycode_prefix if a keycode isn't found in key_names.

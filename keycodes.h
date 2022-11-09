@@ -8,6 +8,8 @@
 #define SYM MO(_SYM)
 #define FUN MO(_FUN) // Fkeys and mods only
 #define NAV MO(_NAV)
+#define GM1 TG(_GM1)
+#define GM2 MO(_GM2)
 
 // shortcuts
 #define M_UNDO LCTL(KC_Z)
@@ -27,4 +29,6 @@ enum layers {
 	_SYM,
 	_NAV,
 	_FUN,
+	_GM1,
+	_GM2,
 };

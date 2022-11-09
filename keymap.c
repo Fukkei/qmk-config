@@ -17,7 +17,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 ),
 
     [_SYM] = LAYOUT_split_3x5_2(
-            M_TSKM,   KC_PLUS, KC_LCBR, KC_RCBR, MACRO_0,    M_FIND, KC_VOLU, KC_VOLD, KC_MUTE, KC_UP,
+            M_TSKM,   KC_PLUS, KC_LCBR, KC_RCBR, MACRO_0,    M_FIND, KC_VOLU, KC_VOLD, GM1, KC_UP,
              KC_LT,   KC_UNDS, KC_LPRN, KC_RPRN,  KC_GRV,    KC_COLN, KC_LSFT, KC_LALT,  KC_LGUI,  KC_LCTL,
             KC_GT,   KC_PAUS, KC_LBRC, KC_RBRC,  KC_DQUO,    KC_LEFT, KC_RGHT, KC_ENTER, MACRO_2, KC_DOWN,
                                              FUN, KC_ENT,    KC_TRNS, KC_TRNS
@@ -35,7 +35,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             	KC_LCTL, KC_LGUI, KC_LALT, KC_LSFT, KC_NO,    KC_F6,  KC_F7, KC_F8, KC_F9, KC_F10,
             			KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,    KC_F11,  KC_F12, KC_NO, KC_NO, KC_NO,
                                     	KC_TRNS,  KC_TRNS,    KC_TRNS, KC_TRNS
-                                )
+                                ),
+
+    [_GM1] = LAYOUT_split_3x5_2(
+                            KC_Q, KC_W, KC_E, KC_R, KC_T,    KC_NO, KC_NO, KC_NO, GM1, KC_NO,
+                            KC_A, KC_S, KC_D, KC_F, KC_G,    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+                            KC_Z, KC_X, KC_C, KC_V, KC_B,    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+                                             KC_SPC, GM2,    KC_NO, KC_NO
+                               ),
+
+    [_GM2] = LAYOUT_split_3x5_2(
+                            KC_Y, KC_U, KC_I, KC_O, KC_P,    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+                         KC_H, KC_J, KC_K, KC_L, KC_SCLN,    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+                    KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH,    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+                                           KC_TAB, KC_NO,    KC_NO, KC_NO
+                               ),
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t* record) {
