@@ -11,14 +11,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_NUM] = LAYOUT_split_3x5_2(
               KC_EXLM, KC_AT,   KC_HASH, KC_DLR, KC_PERC,    KC_1, KC_2, KC_3, KC_4, KC_5,
-              KC_LCTL, KC_LGUI, KC_LALT, KC_LSFT, KC_ENT,    KC_6,  KC_7, KC_8, KC_9, KC_0,
-                 KC_NO,  KC_ASTR, M_XCOP, M_XPST, KC_SPC,    KC_CIRC, KC_AMPR, KC_COMM, KC_DOT, KC_SLSH,
+             KC_LCTL, KC_LGUI, KC_LALT, KC_LSFT, KC_RALT,    KC_6,  KC_7, KC_8, KC_9, KC_0,
+                KC_ENT,  KC_ASTR, M_XCOP, M_XPST, KC_SPC,    KC_CIRC, KC_AMPR, KC_COMM, KC_DOT, KC_SLSH,
                                         KC_TRNS, KC_TRNS,    FUN, KC_TRNS
                                 ),
 
     [_SYM] = LAYOUT_split_3x5_2(
             M_TSKM,   KC_PLUS, KC_LCBR, KC_RCBR, MACRO_0,    M_FIND, KC_VOLU, KC_VOLD, GM1, KC_UP,
-             KC_LT,   KC_UNDS, KC_LPRN, KC_RPRN,  KC_GRV,    KC_COLN, KC_LSFT, KC_LALT,  KC_LGUI,  KC_LCTL,
+             KC_LT,   KC_UNDS, KC_LPRN, KC_RPRN,  KC_GRV,    KC_RALT, KC_LSFT, KC_LALT,  KC_LGUI,  KC_LCTL,
             KC_GT,   KC_PAUS, KC_LBRC, KC_RBRC,  KC_DQUO,    KC_LEFT, KC_RGHT, KC_ENTER, MACRO_2, KC_DOWN,
                                              FUN, KC_ENT,    KC_TRNS, KC_TRNS
                                 ),
