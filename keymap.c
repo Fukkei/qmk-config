@@ -1,6 +1,12 @@
 #include QMK_KEYBOARD_H
 #include "keycodes.h"
 
+enum custom_keycodes {
+    MACRO_0,
+    MACRO_1,
+    MACRO_2,
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_DEF] = LAYOUT_split_3x5_2(
                             KC_Q, KC_W, KC_E, KC_R, KC_T,    KC_Y, KC_U, KC_I, KC_O, KC_P,
@@ -24,7 +30,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 ),
 
     [_NAV] = LAYOUT_split_3x5_2(
-                KC_ESC,  KC_TAB, KC_DEL, KC_BSPC, CAPSWRD,    KC_PGUP, KC_HOME, KC_UP,   KC_END,  KC_EQL,
+                KC_ESC,  KC_TAB, KC_DEL, KC_BSPC, CW_TOGG,    KC_PGUP, KC_HOME, KC_UP,   KC_END,  KC_EQL,
                KC_LCTL, KC_LGUI, KC_LALT, KC_LSFT, M_LANG,    KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, KC_MINS,
                  M_UNDO,  M_CUT,   M_COPY, M_PSTE, M_SAVE,    KC_QUOT, KC_PIPE, KC_TILD, MACRO_1, KC_BSLS,
                                          KC_TRNS, KC_TRNS,    KC_ENT, KC_TRNS
@@ -53,7 +59,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t* record) {
-    
   if (record->event.pressed) {
         switch (keycode) {
             case MACRO_0:
